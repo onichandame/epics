@@ -1,6 +1,6 @@
 FROM onichandame/epics:3.15.7 as epics
 
-FROM onichandame/docker-dev:latest
+FROM onichandame/docker-dev:latest as dev
 COPY --from=epics /epics /epics
 RUN yum install make gcc gcc-c++ readline-devel perl wget -y
 ENV PATH="/epics/base/bin/linux-x86_64/:${PATH}"
