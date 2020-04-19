@@ -1,4 +1,4 @@
-FROM onichandame/epics:3.14.12.8 as epics
+FROM onichandame/epics:3.15.7 as epics
 
 FROM onichandame/docker-dev:latest
 COPY --from=epics /epics /epics
