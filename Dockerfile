@@ -2,7 +2,7 @@ FROM centos:8
 
 WORKDIR /epics
 
-RUN yum install make gcc gcc-c++ wget -y
+RUN yum install make gcc gcc-c++ perl wget -y
 RUN wget -O epics.tar.gz https://epics-controls.org/download/base/base-3.15.7.tar.gz
 RUN tar -zxf epics.tar.gz
 RUN rm epics.tar.gz
