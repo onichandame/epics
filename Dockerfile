@@ -1,4 +1,4 @@
-FROM centos:8
+FROM onichandame/docker-dev:latest
 
 WORKDIR /epics
 
@@ -9,12 +9,6 @@ RUN rm epics.tar.gz
 RUN ln -s /epics/base-3.15.7/ /epics/base
 WORKDIR /epics/base
 RUN make
-
-RUN dnf remove make perl wget make gcc gcc-c++ -y
-RUN rm -rf html
-RUN rm -rf src
-RUN rm -rf bin
-RUN rm -rf documentation
 
 ENV PATH="/epics/base/bin/linux-x86_64/:${PATH}"
 ENV EPICS_HOST_ARCH=linux-x86_64
