@@ -1,4 +1,4 @@
-FROM onichandame/epics:3.15.7
+FROM onichandame/epics
 
 ADD top /top
 

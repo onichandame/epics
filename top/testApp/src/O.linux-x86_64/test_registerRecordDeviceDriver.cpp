@@ -225,7 +225,7 @@ static struct iocshVarDef vardefs[] = {
 int test_registerRecordDeviceDriver(DBBASE *pbase)
 {
     static int executed = 0;
-    const char *bldTop = "/git/epics/top";
+    const char *bldTop = "/top";
     const char *envTop = getenv("TOP");
 
     if (envTop && strcmp(envTop, bldTop)) {
