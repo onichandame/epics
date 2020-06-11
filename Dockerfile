@@ -1,9 +1,7 @@
-FROM centos:8
+FROM onichandame/epics:3.15.7
 
-ADD epics /epics
+ADD top /top
 
-ENV PATH="/epics/base-3.15.7/bin/linux-x86_64/:${PATH}"
-ENV EPICS_HOST_ARCH=linux-x86_64
-ENV EPICS_BASE=/epics/base
+WORKDIR /top/iocBoot/iocexample
 
-WORKDIR /
+ENTRYPOINT ["./st.cmd"]

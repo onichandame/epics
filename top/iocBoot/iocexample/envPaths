@@ -1,0 +1,3 @@
+epicsEnvSet("IOC","iocexample")
+epicsEnvSet("TOP","/git/epics/top")
+epicsEnvSet("EPICS_BASE","/epics/base")
