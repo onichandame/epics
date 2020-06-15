@@ -1,4 +1,4 @@
-FROM onichandame/docker-dev:latest
+FROM centos:8
 
 WORKDIR /epics
 
