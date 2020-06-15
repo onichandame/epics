@@ -1,9 +1,7 @@
-FROM centos:8
+FROM onichandame/epics:dev-3.15.8
 
-ADD epics /epics
-
-ENV PATH="/epics/base-3.15.7/bin/linux-x86_64/:${PATH}"
-ENV EPICS_HOST_ARCH=linux-x86_64
-ENV EPICS_BASE=/epics/base
+RUN dnf remove readline-devel -y
+WORKDIR /epics/base
+RUN rm -rf src bin documentation html
 
 WORKDIR /
