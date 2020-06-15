@@ -2,7 +2,7 @@ FROM centos:8
 
 WORKDIR /epics
 
-RUN dnf install make gcc gcc-c++ wget readline-devel -y
+RUN dnf install perl make gcc gcc-c++ wget readline-devel -y
 RUN wget -O epics.tar.gz https://epics-controls.org/download/base/base-3.15.7.tar.gz
 RUN tar -zxf epics.tar.gz
 RUN rm epics.tar.gz
