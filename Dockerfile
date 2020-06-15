@@ -7,6 +7,7 @@ RUN wget -O epics.tar.gz https://epics-controls.org/download/base/base-3.15.7.ta
 RUN tar -zxf epics.tar.gz
 RUN rm epics.tar.gz
 RUN ln -s /epics/base-3.15.7/ /epics/base
+RUN echo COMMANDLINE_LIBRARY=READLINE >> /epics/base/configure/os/CONFIG.Common.linux-x86_64 # use readline in shell
 WORKDIR /epics/base
 RUN make
 
